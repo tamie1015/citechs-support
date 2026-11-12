@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="CITECHS">
+  <defs>
+    <linearGradient id="ct-g" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0b3d91"/>
+      <stop offset="100%" stop-color="#14a893"/>
+    </linearGradient>
+  </defs>
+  <circle cx="48" cy="48" r="46" fill="url(#ct-g)"/>
+  <circle cx="48" cy="48" r="36" fill="none" stroke="#fff" stroke-width="3" opacity=".35"/>
+  <rect x="28" y="30" width="40" height="28" rx="4" fill="#fff"/>
+  <rect x="32" y="34" width="32" height="16" rx="2" fill="#18408a"/>
+  <rect x="42" y="58" width="12" height="6" fill="#fff"/>
+  <rect x="34" y="64" width="28" height="4" rx="2" fill="#fff"/>
+  <circle cx="68" cy="68" r="10" fill="#0f8b7a" stroke="#fff" stroke-width="2"/>
+  <path d="M65 68h6M68 65v6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+</svg>
