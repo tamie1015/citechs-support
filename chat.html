@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support Chat | CITECHS</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="CITECHS home">
+        <img src="images/cis-logo.svg" alt="" class="brand-logo brand-logo-cis" />
+        <img src="images/citechs-logo.svg" alt="" class="brand-logo brand-logo-citechs" />
+        <span class="brand-text">
+          <strong>CITECHS Chat</strong>
+          <small>Calamba Integrated School</small>
+        </span>
+      </a>
+      <nav class="site-nav">
+        <a href="request.html">New request</a>
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container client-chat-wrap">
+      <div id="chat-blocked" class="panel-card" hidden>
+        <h1>Chat unlocks after a ticket</h1>
+        <p>To protect the support desk, live chat is available only after you submit a support request.</p>
+        <a class="btn btn-primary" href="request.html">Submit a support request</a>
+      </div>
+
+      <div id="client-chat" class="client-chat panel-card" hidden>
+        <header class="chat-header">
+          <div>
+            <h1 id="client-chat-title">Support chat</h1>
+            <p id="client-chat-meta" class="muted"></p>
+          </div>
+          <span id="client-status" class="status-pill ok">Connected</span>
+        </header>
+        <div id="client-message-list" class="message-list client-message-list" aria-live="polite"></div>
+        <form id="client-reply-form" class="composer">
+          <label class="sr-only" for="client-reply-body">Message</label>
+          <textarea id="client-reply-body" rows="2" placeholder="Message the CITECHS technician…" required></textarea>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

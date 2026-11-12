@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | CITECHS</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="CITECHS home">
+        <img src="images/cis-logo.svg" alt="" class="brand-logo brand-logo-cis" />
+        <img src="images/citechs-logo.svg" alt="" class="brand-logo brand-logo-citechs" />
+        <span class="brand-text">
+          <strong>CITECHS Admin</strong>
+          <small>Calamba Integrated School</small>
+        </span>
+      </a>
+      <div class="header-actions">
+        <span id="admin-user-label" class="user-chip"></span>
+        <a class="btn btn-ghost btn-nav" href="technician.html">Open chat desk</a>
+        <button id="logout-btn" class="btn btn-primary btn-nav" type="button">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container panel-grid">
+      <section class="panel-card">
+        <h1>Administrator</h1>
+        <p class="muted">Change your password and manage technician accounts for the support chat.</p>
+
+        <h2>Change admin password</h2>
+        <form id="password-form" class="support-form compact-form" novalidate>
+          <div class="field">
+            <label for="currentPassword">Current password</label>
+            <input id="currentPassword" type="password" required autocomplete="current-password" />
+          </div>
+          <div class="field">
+            <label for="newPassword">New password</label>
+            <input id="newPassword" type="password" required minlength="8" autocomplete="new-password" />
+          </div>
+          <div class="field">
+            <label for="confirmPassword">Confirm new password</label>
+            <input id="confirmPassword" type="password" required minlength="8" autocomplete="new-password" />
+          </div>
+          <p id="password-msg" class="form-status" hidden></p>
+          <button class="btn btn-primary" type="submit">Update password</button>
+        </form>
+      </section>
+
+      <section class="panel-card">
+        <h2>Create technician</h2>
+        <p class="muted">Only accounts you create here can sign in to the technician chat desk.</p>
+        <form id="tech-form" class="support-form compact-form" novalidate>
+          <div class="field">
+            <label for="techUsername">Username</label>
+            <input id="techUsername" type="text" required autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="techDisplayName">Display name</label>
+            <input id="techDisplayName" type="text" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="techPassword">Temporary password</label>
+            <input id="techPassword" type="password" required minlength="8" autocomplete="new-password" />
+          </div>
+          <p id="tech-msg" class="form-status" hidden></p>
+          <button class="btn btn-primary" type="submit">Create technician</button>
+        </form>
+      </section>
+
+      <section class="panel-card panel-wide">
+        <div class="panel-heading-row">
+          <h2>Technicians</h2>
+          <button id="refresh-techs" class="btn btn-ghost" type="button">Refresh</button>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Display name</th>
+                <th>Status</th>
+                <th>Created</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tech-table-body">
+              <tr><td colspan="5">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

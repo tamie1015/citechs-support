@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track Ticket | CITECHS</title>
+  <meta name="description" content="Look up a CITECHS support ticket and reopen the private chat." />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="CITECHS home">
+        <img src="images/cis-logo.svg" alt="CIS" class="brand-logo brand-logo-cis" />
+        <img src="images/citechs-logo.svg" alt="CITECHS" class="brand-logo brand-logo-citechs" />
+        <span class="brand-text">
+          <strong>CITECHS</strong>
+          <small>Calamba Integrated School</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="knowledge.html">FAQs &amp; Knowledge Base</a>
+        <a href="request.html" class="btn btn-primary btn-nav">Request Support</a>
+        <a href="track.html" class="active">Track ticket</a>
+        <a href="contact.html">Contact</a>
+        <a href="staff-login.html">Staff Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Ticket status</p>
+        <h1>Track your request</h1>
+        <p class="lead">Enter the ticket ID from your confirmation and the email you used on the form to reopen the private chat.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container form-layout">
+        <form id="track-form" class="support-form" novalidate>
+          <div class="field">
+            <label for="ticketId">Ticket ID <span aria-hidden="true">*</span></label>
+            <input id="ticketId" name="ticketId" type="text" required placeholder="e.g. CIS-20260901-1234" autocomplete="off" />
+            <p class="field-error" data-error-for="ticketId" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email">Email on the request <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+            <p class="field-error" data-error-for="email" hidden></p>
+          </div>
+          <p id="track-error" class="field-error" hidden></p>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Find ticket</button>
+          </div>
+        </form>
+
+        <aside class="form-aside">
+          <div class="aside-card">
+            <h2>Need a new request?</h2>
+            <p class="muted">If you never received a ticket ID, submit a new support request.</p>
+            <a class="btn btn-ghost" href="request.html">Request Support</a>
+          </div>
+        </aside>
+      </div>
+
+      <div id="track-result" class="success-banner container" hidden>
+        <h2 id="track-result-title">Ticket found</h2>
+        <p id="track-result-meta"></p>
+        <a id="track-chat-link" class="btn btn-primary" href="#">Open support chat</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>CITECHS</strong>
+        <p>Technical Support Team<br />Calamba Integrated School</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="services.html">Services</a>
+        <a href="knowledge.html">FAQs &amp; Knowledge Base</a>
+        <a href="request.html">Request Support</a>
+        <a href="track.html">Track ticket</a>
+        <a href="contact.html">Contact</a>
+        <a href="staff-login.html">Staff Login</a>
+      </div>
+      <div>
+        <h3>Support hours</h3>
+        <p>Monday–Friday<br />8:00 AM – 4:00 PM<br /><span class="muted">School days only</span></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Calamba Integrated School - CITECHS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/track.js"></script>
+</body>
+</html>

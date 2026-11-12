@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs &amp; Knowledge Base | CITECHS</title>
+  <meta name="description" content="FAQs and how-to guides from CITECHS for Calamba Integrated School." />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="CITECHS home">
+        <img src="images/cis-logo.svg" alt="CIS" class="brand-logo brand-logo-cis" />
+        <img src="images/citechs-logo.svg" alt="CITECHS" class="brand-logo brand-logo-citechs" />
+        <span class="brand-text">
+          <strong>CITECHS</strong>
+          <small>Calamba Integrated School</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="knowledge.html" class="active">FAQs &amp; Knowledge Base</a>
+        <a href="request.html" class="btn btn-primary btn-nav">Request Support</a>
+        <a href="track.html">Track ticket</a>
+        <a href="contact.html">Contact</a>
+        <a href="staff-login.html">Staff Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Self-service help</p>
+        <h1>FAQs &amp; Knowledge Base</h1>
+        <p class="lead">Search common solutions before opening a ticket. Still stuck? Submit a support request anytime.</p>
+        <div class="search-bar">
+          <label class="sr-only" for="kb-search">Search knowledge base</label>
+          <input id="kb-search" type="search" placeholder="Search FAQs (e.g. password, WiFi, projector)…" autocomplete="off" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container kb-layout">
+        <aside class="kb-toc" aria-label="Topics">
+          <h2>Topics</h2>
+          <a href="#accounts">Accounts &amp; passwords</a>
+          <a href="#wifi">WiFi &amp; network</a>
+          <a href="#devices">Devices</a>
+          <a href="#classroom">Classroom tech</a>
+          <a href="#tickets">Tickets &amp; support</a>
+          <a href="#printing">Printing</a>
+          <a href="#safety">Safe computing</a>
+        </aside>
+
+        <div class="kb-content">
+          <section id="accounts" class="kb-section" data-tags="account password login email google classroom">
+            <h2>Accounts &amp; passwords</h2>
+            <div class="accordion">
+              <details class="faq-item" open>
+                <summary>I forgot my school account password. What should I do?</summary>
+                <div class="faq-body">
+                  <p>Try the platform's "Forgot password" option using your school email. If that fails, submit a support request with your full name, role (student/teacher/staff), and ID number so CITECHS can verify and assist.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>I can't sign in to Google Classroom or school email.</summary>
+                <div class="faq-body">
+                  <p>Confirm you are using your school email (not a personal Gmail). Check Caps Lock, try another browser or Incognito/Private mode, and clear cached passwords. If the error continues, open a ticket and include the exact error message.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>My account looks locked or disabled.</summary>
+                <div class="faq-body">
+                  <p>Do not keep guessing passwords. Submit a request marked <strong>High</strong> priority and note when the lock started. CITECHS will review account status with the school's policies.</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <section id="wifi" class="kb-section" data-tags="wifi wi-fi network internet connection online">
+            <h2>WiFi &amp; network</h2>
+            <div class="accordion">
+              <details class="faq-item">
+                <summary>I can't connect to School WiFi.</summary>
+                <div class="faq-body">
+                  <ol>
+                    <li>Toggle Airplane Mode off/on, then retry WiFi.</li>
+                    <li>Forget the school network and reconnect with the correct credentials.</li>
+                    <li>Restart your device.</li>
+                    <li>Try another nearby access point or room.</li>
+                  </ol>
+                  <p>If many people in the same room are offline, report an outage with building and room number.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>WiFi connects but websites won't load.</summary>
+                <div class="faq-body">
+                  <p>Check if only some sites fail (filtering) or all sites fail. Try switching DNS/browser temporarily isn't required-report the issue with your device type, room, and time it started so CITECHS can investigate.</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <section id="devices" class="kb-section" data-tags="laptop tablet printer projector device hardware battery">
+            <h2>Devices</h2>
+            <div class="accordion">
+              <details class="faq-item">
+                <summary>My school laptop won't turn on.</summary>
+                <div class="faq-body">
+                  <p>Plug into a known-good charger for at least 15 minutes, then try powering on. If the charging light never appears or it still won't boot, submit a ticket with asset/serial info if available and where the device can be picked up.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>The classroom projector has no signal.</summary>
+                <div class="faq-body">
+                  <ul>
+                    <li>Confirm the projector is powered on and not in standby.</li>
+                    <li>Check the HDMI/cable connection on both ends.</li>
+                    <li>Select the correct input source on the projector remote.</li>
+                    <li>Try another cable or laptop if available.</li>
+                  </ul>
+                  <p>Still blank? Request classroom AV support and include the room number.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>The printer won't print.</summary>
+                <div class="faq-body">
+                  <p>Check paper, toner/ink, and error lights. Confirm you selected the correct printer and that the device is online. For school printers, include the printer location/name in your ticket.</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <section id="classroom" class="kb-section" data-tags="classroom software av display cast install application">
+            <h2>Classroom tech</h2>
+            <div class="accordion">
+              <details class="faq-item">
+                <summary>I need software installed for class.</summary>
+                <div class="faq-body">
+                  <p>Submit a request with the software name, version (if known), which devices/rooms need it, and the date needed. Installs follow school approval policies and may take time-request early when possible.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>Screen casting / wireless display isn't working.</summary>
+                <div class="faq-body">
+                  <p>Ensure the teacher device and display are on the school network. Restart both devices, then retry. Include room number and device types in your ticket if it still fails.</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <section id="tickets" class="kb-section" data-tags="ticket request support status help">
+            <h2>Tickets &amp; support</h2>
+            <div class="accordion">
+              <details class="faq-item">
+                <summary>How do I request help from CITECHS?</summary>
+                <div class="faq-body">
+                  <p>Use the <a href="request.html">Request Support</a> form. Include a clear title, category, location, and a detailed description. The more detail you provide, the faster we can help.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>What counts as an urgent request?</summary>
+                <div class="faq-body">
+                  <p>Examples: active class cannot teach because of AV failure, school-wide outage, exam-day system failure, or security-related account lockouts. Mark priority carefully so urgent classroom needs are not delayed.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>How do I track my ticket or reopen the chat?</summary>
+                <div class="faq-body">
+                  <p>Keep your ticket ID from the confirmation screen. Go to <a href="track.html">Track ticket</a>, enter that ID and the same email you used on the form, then open the private chat.</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <section id="printing" class="kb-section" data-tags="print printer photocopy lab chromebook">
+            <h2>Printing</h2>
+            <div class="accordion">
+              <details class="faq-item">
+                <summary>I need to print from a school computer.</summary>
+                <div class="faq-body">
+                  <p>Select the labeled school printer for your lab or office, check paper and error lights, then print a test page. If the job stays queued, restart the computer and try again. Include the printer name and room in a ticket if it still fails.</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <section id="safety" class="kb-section" data-tags="phishing scam email safety security suspicious">
+            <h2>Safe computing</h2>
+            <div class="accordion">
+              <details class="faq-item">
+                <summary>I received a suspicious email asking for my password.</summary>
+                <div class="faq-body">
+                  <p>CITECHS and school offices will never ask you to send your password by email or chat. Do not click unexpected links or attachments. Report the message in a High-priority ticket so the team can review it.</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <p class="kb-empty" hidden>No articles match your search. Try another keyword or <a href="request.html">open a support request</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>CITECHS</strong>
+        <p>Technical Support Team<br />Calamba Integrated School</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="services.html">Services</a>
+        <a href="knowledge.html">FAQs &amp; Knowledge Base</a>
+        <a href="request.html">Request Support</a>
+        <a href="track.html">Track ticket</a>
+        <a href="contact.html">Contact</a>
+      
+        <a href="staff-login.html">Staff Login</a>
+      </div>
+      <div>
+        <h3>Support hours</h3>
+        <p>Monday–Friday<br />8:00 AM – 4:00 PM<br /><span class="muted">School days only</span></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Calamba Integrated School - CITECHS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body> 
+</html>
+

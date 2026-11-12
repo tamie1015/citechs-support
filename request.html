@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Support | CITECHS</title>
+  <meta name="description" content="Submit a technical support ticket to CITECHS at Calamba Integrated School." />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="CITECHS home">
+        <img src="images/cis-logo.svg" alt="CIS" class="brand-logo brand-logo-cis" />
+        <img src="images/citechs-logo.svg" alt="CITECHS" class="brand-logo brand-logo-citechs" />
+        <span class="brand-text">
+          <strong>CITECHS</strong>
+          <small>Calamba Integrated School</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="knowledge.html">FAQs &amp; Knowledge Base</a>
+        <a href="request.html" class="btn btn-primary btn-nav active">Request Support</a>
+        <a href="track.html">Track ticket</a>
+        <a href="contact.html">Contact</a>
+        <a href="staff-login.html">Staff Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Support ticket</p>
+        <h1>Request Support</h1>
+        <p class="lead">Tell CITECHS what's wrong. Include room/location and as much detail as you can.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container form-layout">
+        <form id="support-form" class="support-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullName">Full name <span aria-hidden="true">*</span></label>
+              <input id="fullName" name="fullName" type="text" required autocomplete="name" />
+              <p class="field-error" data-error-for="fullName" hidden></p>
+            </div>
+            <div class="field">
+              <label for="schoolId">Student / Employee ID</label>
+              <input id="schoolId" name="schoolId" type="text" autocomplete="off" />
+            </div>
+            <div class="field">
+              <label for="role">Role <span aria-hidden="true">*</span></label>
+              <select id="role" name="role" required>
+                <option value="">Select role</option>
+                <option value="Student">Student</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Staff">Staff</option>
+                <option value="Administrator">Administrator</option>
+              </select>
+              <p class="field-error" data-error-for="role" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+              <p class="field-error" data-error-for="email" hidden></p>
+            </div>
+            <div class="field">
+              <label for="phone">Contact number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="location">Building / Room <span aria-hidden="true">*</span></label>
+              <input id="location" name="location" type="text" required placeholder="e.g. ICT Lab, Room 204" />
+              <p class="field-error" data-error-for="location" hidden></p>
+            </div>
+            <div class="field">
+              <label for="category">Category <span aria-hidden="true">*</span></label>
+              <select id="category" name="category" required>
+                <option value="">Select category</option>
+                <option value="Accounts & Access">Accounts &amp; Access</option>
+                <option value="Hardware">Hardware / Devices</option>
+                <option value="Network">Network / Wi‑Fi</option>
+                <option value="Classroom AV">Classroom AV</option>
+                <option value="Software">Software Request</option>
+                <option value="Printer">Printer</option>
+                <option value="Other">Other</option>
+              </select>
+              <p class="field-error" data-error-for="category" hidden></p>
+            </div>
+            <div class="field">
+              <label for="priority">Priority <span aria-hidden="true">*</span></label>
+              <select id="priority" name="priority" required>
+                <option value="">Select priority</option>
+                <option value="Low">Low - can wait a day or two</option>
+                <option value="Normal" selected>Normal - needed soon</option>
+                <option value="High">High - affects class/work today</option>
+                <option value="Urgent">Urgent - outage or exam impact</option>
+              </select>
+              <p class="field-error" data-error-for="priority" hidden></p>
+            </div>
+            <div class="field field-full">
+              <label for="subject">Subject <span aria-hidden="true">*</span></label>
+              <input id="subject" name="subject" type="text" required maxlength="120" placeholder="Short summary of the issue" />
+              <p class="field-error" data-error-for="subject" hidden></p>
+            </div>
+            <div class="field field-full">
+              <label for="description">Description <span aria-hidden="true">*</span></label>
+              <textarea id="description" name="description" rows="6" required placeholder="What happened? When did it start? What have you already tried?"></textarea>
+              <p class="field-error" data-error-for="description" hidden></p>
+            </div>
+          </div>
+
+          <p class="form-note">
+            After you submit, a private support chat unlocks so you can message a CITECHS technician about this ticket.
+          </p>
+          <p id="submit-error" class="field-error" hidden></p>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Submit request</button>
+            <button class="btn btn-ghost" type="reset">Clear form</button>
+          </div>
+        </form>
+
+        <aside class="form-aside">
+          <div class="aside-card">
+            <h2>Before you submit</h2>
+            <ul>
+              <li>Check the <a href="knowledge.html">Knowledge Base</a> for quick fixes.</li>
+              <li>Include exact error messages when possible.</li>
+              <li>Mark priority honestly so classroom emergencies are handled first.</li>
+            </ul>
+          </div>
+          <div class="aside-card" id="recent-tickets" hidden>
+            <h2>Your recent tickets (this device)</h2>
+            <ul id="ticket-list"></ul>
+          </div>
+        </aside>
+      </div>
+
+      <div id="form-success" class="success-banner container" hidden role="status" aria-live="polite">
+        <h2>Request submitted</h2>
+        <p>Your ticket ID is <strong id="ticket-id"></strong>. You can now chat with a CITECHS technician.</p>
+        <div class="hero-actions">
+          <a id="chat-link" class="btn btn-primary" href="#">Open support chat</a>
+          <a class="btn btn-ghost" href="knowledge.html">Back to Knowledge Base</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>CITECHS</strong>
+        <p>Technical Support Team<br />Calamba Integrated School</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="services.html">Services</a>
+        <a href="knowledge.html">FAQs &amp; Knowledge Base</a>
+        <a href="request.html">Request Support</a>
+        <a href="track.html">Track ticket</a>
+        <a href="contact.html">Contact</a>
+        <a href="staff-login.html">Staff Login</a>
+      </div>
+      <div>
+        <h3>Support hours</h3>
+        <p>Monday–Friday<br />8:00 AM – 4:00 PM<br /><span class="muted">School days only</span></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Calamba Integrated School - CITECHS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
