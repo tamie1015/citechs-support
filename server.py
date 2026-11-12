@@ -21,7 +21,6 @@ DATA_DIR = ROOT / "data"
 DB_PATH = DATA_DIR / "citechs.db"
 HOST = "0.0.0.0"
 PORT = int(os.environ.get("PORT", "5500"))
-Verification: HOST is set to "0.0.0.0" and PORT reads os.environ.get("PORT", "5500").
 
 # Your Google Apps Script Web App URL
 GOOGLE_SHEET_WEBHOOK_URL = os.environ.get(
